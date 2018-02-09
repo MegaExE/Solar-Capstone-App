@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SolarCapstoneApp</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>PV1</item>
+        <item>PV2</item>
+        <item>PV3</item>
+        <item>PV4</item>
+    </string-array>
 </resources>
