@@ -1,7 +1,8 @@
 package humber.ceng355.solarcapstoneapp;
 
 /**
- * Created by Owner on 2/8/2018.
+ * Solar Capstone
+ * Raphael Najera, Johnson Liang, Adrian Caprini
  */
 
 import android.app.Activity;

@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 
 
 /**
- * Created by Owner on 2/8/2018.
+ * Solar Capstone
+ * Raphael Najera, Johnson Liang, Adrian Caprini
  */
 
 public class SolarPV4 extends Fragment {
@@ -19,6 +20,9 @@ public class SolarPV4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_solarpv4, container, false);
+
+        //Connection to Database
+
 
         return rootView;
     }

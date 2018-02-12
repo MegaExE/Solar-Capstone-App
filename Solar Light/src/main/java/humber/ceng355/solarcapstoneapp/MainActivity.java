@@ -1,5 +1,10 @@
 package humber.ceng355.solarcapstoneapp;
 
+/**
+ * Solar Capstone
+ * Raphael Najera, Johnson Liang, Adrian Caprini
+ */
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
