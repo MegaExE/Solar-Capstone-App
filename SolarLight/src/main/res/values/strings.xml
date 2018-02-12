@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SolarCapstoneApp</string>
+    <string name="app_name">SolarLight</string>
 
     <string-array name="navigation_drawer_items_array">
         <item>PV1</item>

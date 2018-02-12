@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Solar-Capstone-App.iml" filepath="$PROJECT_DIR$/Solar-Capstone-App.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SolarCapstoneApp/SolarCapstoneApp.iml" filepath="$PROJECT_DIR$/SolarCapstoneApp/SolarCapstoneApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SolarLight/SolarCapstoneApp.iml" filepath="$PROJECT_DIR$/SolarLight/SolarCapstoneApp.iml" />
     </modules>
   </component>
 </project>
