@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <!--
+        <item
+            style="@style/AppTheme"
+            android:id="@+id/Setting"
+            android:title="@string/Setting"
+            app:showAsAction="never"
+            android:orderInCategory="4"></item>
+    -->
+
+    <item
+        style="@style/AppTheme"
+        android:id="@+id/HC"
+        android:title="@string/HumberCollege"
+        app:showAsAction="always"
+        android:orderInCategory="1"></item>
+
+    <item
+        style="@style/AppTheme"
+        android:id="@+id/About"
+        android:title="@string/About"
+        app:showAsAction="never"
+        android:orderInCategory="2"></item>
+
+
+
+</menu>

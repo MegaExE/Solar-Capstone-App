@@ -20,7 +20,8 @@ public class SolarPV2 extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_solarpv2, container, false);
 
-        //Connection to Database
+        //Connection to Firebase Database
+
 
         return rootView;
     }
