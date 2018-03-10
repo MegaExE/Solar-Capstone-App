@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "795077978671",
+    "firebase_url": "https://solar-capstone.firebaseio.com",
+    "project_id": "solar-capstone",
+    "storage_bucket": "solar-capstone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795077978671:android:a22b62d0ea273e71",
+        "android_client_info": {
+          "package_name": "humber.ceng355.solarcapstoneapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795077978671-ip8f4op72maj2qufjht8s3k3m5pgnric.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "humber.ceng355.solarcapstoneapp",
+            "certificate_hash": "d7734f2e21611b50b64d45c23599a40070cb1013"
+          }
+        },
+        {
+          "client_id": "795077978671-0vouotgrf7p7pdgtlvu470l51uvoe5gm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEZAL-C7lS6Epw-8BlyQ24UG41YjMY9Kc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795077978671-0vouotgrf7p7pdgtlvu470l51uvoe5gm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
