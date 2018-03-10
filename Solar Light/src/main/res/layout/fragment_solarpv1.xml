@@ -16,4 +16,63 @@
         android:textSize="45dp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/PV1_Power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/label"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="57dp"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/PV1_Dailyyield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/PV1_Power"
+        android:layout_below="@+id/PV1_Power"
+        android:layout_marginTop="19dp"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/PV1_Power_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/PV1_Dailyyield"
+        android:layout_marginStart="52dp"
+        android:layout_toEndOf="@+id/PV1_Power"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/PV1_Dialyyield_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/PV1_Dailyyield"
+        android:layout_alignEnd="@+id/PV1_Power_Value"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/PV1_Totalyield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/PV1_Dailyyield"
+        android:layout_below="@+id/PV1_Dailyyield"
+        android:layout_marginTop="36dp"
+        android:text="TextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/PV1_Totalyield_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/PV1_Dialyyield_Value"
+        android:layout_alignTop="@+id/PV1_Totalyield"
+        android:text="TextView"
+        android:textSize="24sp" />
+
 </RelativeLayout>
