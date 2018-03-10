@@ -7,4 +7,11 @@
         <item>PV3</item>
         <item>PV4</item>
     </string-array>
+
+
+    <string name="HumberCollege">HumberCollege</string>
+    <string name="About">About</string>
+
+
+
 </resources>

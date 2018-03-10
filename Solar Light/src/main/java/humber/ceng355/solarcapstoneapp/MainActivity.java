@@ -5,13 +5,20 @@ package humber.ceng355.solarcapstoneapp;
  * Raphael Najera, Johnson Liang, Adrian Caprini
  */
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -55,6 +62,44 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerToggle();
 
+    }
+
+    final Context context = this;
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            //super.onBackPressed();
+            //When user clicks on Android Back Key, display alert dialog with two options, Yes, exit the app, No, stays in the app.
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+            // set title
+            alertDialogBuilder.setTitle("Exit");
+            // set dialog message
+            alertDialogBuilder
+                    .setMessage("Are you sure you want to Exit?")
+                    .setCancelable(false)
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public  void onClick(DialogInterface dialog,int id){
+                            // if this button is clicked, just close
+                            // the dialog box and do nothing
+                            dialog.cancel();
+                        }
+                    })
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // if this button is clicked, just close
+                            // exit the app
+                            finish();
+                        }
+                    });
+            // create alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            // show it
+            alertDialog.show();
+        }
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -104,15 +149,51 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.About:
+                AlertDialog.Builder alertDialogBuilder2 = new AlertDialog.Builder(context);
+                // set title
+                alertDialogBuilder2.setTitle("About");
+                // set dialog message
+                alertDialogBuilder2
+                        .setMessage("About Message: \n")
+                        .setCancelable(false)
+                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // if this button is clicked, just close
+                                // the dialog box and do nothing
+                                dialog.cancel();
+                            }
+                        });
+                // create alert dialog
+                AlertDialog alertDialog2 = alertDialogBuilder2.create();
+                // show it
+                alertDialog2.show();
+                break;
+            /*
+            case R.id.Setting:
+                break;
+            */
+            //Links to Humber College
+            case R.id.HC:
+                Uri url = Uri.parse("http://humber.ca/");
+                Intent launch = new Intent(Intent.ACTION_VIEW, url);
+                startActivity(launch);
+                break;
         }
 
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
