@@ -58,10 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="53dp"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="36dp"
-        android:text="TextView"
+        android:layout_marginTop="44dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toEndOf="@+id/PV1_Power"
         app:layout_constraintTop_toBottomOf="@+id/PV1_Date_Value" />
 
@@ -71,7 +71,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="32dp"
-        android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/PV1_Power_Value"
         app:layout_constraintTop_toBottomOf="@+id/PV1_Power_Value" />
@@ -92,7 +91,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/PV1_Dialyyield_Value"
         app:layout_constraintTop_toBottomOf="@+id/PV1_Dialyyield_Value" />
