@@ -30,12 +30,12 @@ public class SolarPV1 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        //Connection to Firebase Database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("PV1");
         View rootView = inflater.inflate(R.layout.fragment_solarpv1, container, false);
 
-        //Connection to Firebase Database
+
 
 
         return rootView;
@@ -55,8 +55,8 @@ public class SolarPV1 extends Fragment {
                     //Retrieving the data stored on the firebase
                     String PV1_Date = dss.child("Date").getValue(String.class);
                     String PV1_Power = dss.child("Power").getValue(String.class);
-                    String PV1_Daily = dss.child("Daily yield").getValue(String.class);
-                    String PV1_Total = dss.child("Total yield").getValue(String.class);
+                    String PV1_Daily = dss.child("Daily_yield").getValue(String.class);
+                    String PV1_Total = dss.child("Total_yield").getValue(String.class);
                     //Declaring textviews
                     TextView PV1DateValueTV = getActivity().findViewById(R.id.PV1_Date_Value);
                     TextView PV1PowerValueTV = getActivity().findViewById(R.id.PV1_Power_Value);

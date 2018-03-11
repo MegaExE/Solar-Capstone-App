@@ -1,19 +1,97 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="25dp">
 
 
     <TextView
-        android:id="@+id/label"
-        android:layout_width="fill_parent"
+        android:id="@+id/PV2_Date_Value"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:gravity="center_horizontal"
-        android:text="PV2"
-        android:textSize="45dp"
-        android:textStyle="bold" />
+        android:layout_marginTop="13dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:gravity="center_horizontal"
+        android:text="@string/PV2"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PV2_Power"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/Power"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/PV2_Dailyyield"
+        app:layout_constraintStart_toStartOf="@+id/PV2_Dailyyield" />
+
+    <TextView
+        android:id="@+id/PV2_Dailyyield"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="51dp"
+        android:text="@string/Dailyyield"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/PV2_Dialyyield_Value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PV2_Dialyyield_Value" />
+
+    <TextView
+        android:id="@+id/PV2_Power_Value"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="53dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="36dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PV2_Power"
+        app:layout_constraintTop_toBottomOf="@+id/PV2_Date_Value" />
+
+    <TextView
+        android:id="@+id/PV2_Dialyyield_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/PV2_Power_Value"
+        app:layout_constraintTop_toBottomOf="@+id/PV2_Power_Value" />
+
+    <TextView
+        android:id="@+id/PV2_Totalyield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/Totalyield"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PV2_Dailyyield" />
+
+    <TextView
+        android:id="@+id/PV2_Totalyield_Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/PV2_Dialyyield_Value"
+        app:layout_constraintTop_toBottomOf="@+id/PV2_Dialyyield_Value" />
+
+</android.support.constraint.ConstraintLayout>

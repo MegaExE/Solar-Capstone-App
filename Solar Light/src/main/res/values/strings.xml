@@ -12,6 +12,14 @@
     <string name="HumberCollege">HumberCollege</string>
     <string name="About">About</string>
 
+    <string name="PV1">Solar Panel PV1</string>
+    <string name="PV2">Solar Panel PV2</string>
+    <string name="PV3">Solar Panel PV3</string>
+    <string name="PV4">Solar Panel PV4</string>
+    <string name="Power">Power:</string>
+    <string name="Dailyyield">Daily yield:</string>
+    <string name="Totalyield">Total yield:</string>
+
 
 
 </resources>
