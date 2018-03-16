@@ -111,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     private void selectItem(int position) {
 
         //Navigation Drawer
