@@ -1,4 +1,4 @@
-package humber.ceng355.solarcapstoneapp;
+package humber.ceng355.solarcapstoneapp.PV1;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +14,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import humber.ceng355.solarcapstoneapp.R;
+
 import static android.content.ContentValues.TAG;
 
 
@@ -22,8 +24,8 @@ import static android.content.ContentValues.TAG;
  * Raphael Najera, Johnson Liang, Adrian Caprini
  */
 
-public class SolarPV1 extends Fragment {
-    public SolarPV1() {
+public class PV1CurrentData extends Fragment {
+    public PV1CurrentData() {
     }
 
     DatabaseReference myRef;
