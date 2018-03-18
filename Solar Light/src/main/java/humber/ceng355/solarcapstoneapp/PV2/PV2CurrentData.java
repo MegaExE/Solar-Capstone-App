@@ -19,7 +19,8 @@ import humber.ceng355.solarcapstoneapp.R;
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by Raphael on 2/8/2018.
+ * Solar Capstone
+ * Raphael Najera, Johnson Liang, Adrian Caprini
  */
 
 public class PV2CurrentData extends Fragment {
