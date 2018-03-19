@@ -1,4 +1,4 @@
-package humber.ceng355.solarcapstoneapp;
+package humber.ceng355.solarcapstoneapp.PV3;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,14 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import humber.ceng355.solarcapstoneapp.R;
+
 
 /**
  * Solar Capstone
  * Raphael Najera, Johnson Liang, Adrian Caprini
  */
 
-public class SolarPV3 extends Fragment {
-    public SolarPV3() {
+public class PV3CurrentData extends Fragment {
+    public PV3CurrentData() {
     }
 
     //DatabaseReference myRef;

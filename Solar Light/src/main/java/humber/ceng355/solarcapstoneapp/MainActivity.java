@@ -24,6 +24,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import humber.ceng355.solarcapstoneapp.PV1.SolarPV1;
+import humber.ceng355.solarcapstoneapp.PV2.SolarPV2;
+import humber.ceng355.solarcapstoneapp.PV3.SolarPV3;
+import humber.ceng355.solarcapstoneapp.PV4.SolarPV4;
+
 public class MainActivity extends AppCompatActivity {
 
     //Declare the variables

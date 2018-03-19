@@ -1,4 +1,4 @@
-package humber.ceng355.solarcapstoneapp;
+package humber.ceng355.solarcapstoneapp.PV1;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,7 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -14,7 +15,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import humber.ceng355.solarcapstoneapp.R;
+
 import static android.content.ContentValues.TAG;
+import static humber.ceng355.solarcapstoneapp.R.layout.fragment_history_solarpv1;
 
 
 /**
@@ -22,29 +29,49 @@ import static android.content.ContentValues.TAG;
  * Raphael Najera, Johnson Liang, Adrian Caprini
  */
 
-public class SolarPV1 extends Fragment {
-    public SolarPV1() {
+public class PV1History extends Fragment {
+    public PV1History() {
     }
 
     DatabaseReference myRef;
+
+    //Declare Arraylist
+    ArrayList<String> Data;
+    static ArrayList<String> arrayList;
+    static ArrayAdapter<String> adapter;
+
+    //Declare ListView
+    ListView chl;
+
+    View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Connection to Firebase Database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("PV1");
-        View rootView = inflater.inflate(R.layout.fragment_solarpv1, container, false);
+        view = inflater.inflate(fragment_history_solarpv1, container, false);
+
+        //This section will be storing the Challenges and Task in a String
+        String[] items = new String[0];
+
+        //Create an ArrayList object to store the challenges and tasks
+        arrayList = new ArrayList<>(Arrays.asList(items));
 
 
+        //Create an instance of ListView
+        chl=(ListView) view.findViewById(R.id.list);
 
-
-        return rootView;
+        return view;
     }
 
     public void onStart(){
         super.onStart();
 
-        myRef.addValueEventListener(new ValueEventListener() {
+        String[] t = new String[0];
+        Data = new ArrayList<>(Arrays.asList(t));
+
+      myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -57,19 +84,20 @@ public class SolarPV1 extends Fragment {
                     String PV1_Power = dss.child("Power").getValue(String.class);
                     String PV1_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV1_Total = dss.child("Total_yield").getValue(String.class);
-                    //Declaring textviews
-                    TextView PV1DateValueTV = getActivity().findViewById(R.id.PV1_Date_Value);
-                    TextView PV1PowerValueTV = getActivity().findViewById(R.id.PV1_Power_Value);
-                    TextView PV1DailyValueTV = getActivity().findViewById(R.id.PV1_Dialyyield_Value);
-                    TextView PV1TotalValueTV = getActivity().findViewById(R.id.PV1_Totalyield_Value);
 
+                    Data.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
 
-                    //Display the Date, Current Power, Daily yield and Total yield that PV1 stored on the firebase
-                    PV1DateValueTV.setText(PV1_Date);
-                    PV1PowerValueTV.setText(PV1_Power);
-                    PV1DailyValueTV.setText(PV1_Daily);
-                    PV1TotalValueTV.setText(PV1_Total);
+                   // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
+                for(int i = (Data.size()-1); i > (Data.size() - 10); i--) {
+
+
+                    arrayList.add(Data.get(i));
+                }
+                //Adds checkbox to the listview
+                adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, arrayList);
+                chl.setAdapter(adapter);
+
 
             }
 
