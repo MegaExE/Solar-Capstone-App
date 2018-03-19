@@ -86,22 +86,6 @@ public class PV1History extends Fragment {
                     String PV1_Total = dss.child("Total_yield").getValue(String.class);
 
                     Data.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
-                    //Declaring textviews
-                    /*TextView PV1DateValueTV = getActivity().findViewById(R.id.PV3_Date_Value);
-                    TextView PV1PowerValueTV = getActivity().findViewById(R.id.PV3_Power_Value);
-                    TextView PV1DailyValueTV = getActivity().findViewById(R.id.PV3_Dialyyield_Value);
-                    TextView PV1TotalValueTV = getActivity().findViewById(R.id.PV2_Totalyield_Value);
-                    */
-
-                    //Display the Date, Current Power, Daily yield and Total yield that PV1 stored on the firebase
-                    /*PV1DateValueTV.setText(PV3_Date);
-                    PV1PowerValueTV.setText(PV3_Power);
-                    PV1DailyValueTV.setText(PV3_Daily);
-                    PV1TotalValueTV.setText(PV3_Total);*/
-
-
-
-
 
                    // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
