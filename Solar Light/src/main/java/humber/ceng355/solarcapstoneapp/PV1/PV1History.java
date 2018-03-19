@@ -68,8 +68,13 @@ public class PV1History extends Fragment {
     public void onStart(){
         super.onStart();
 
+
         String[] t = new String[0];
         Data = new ArrayList<>(Arrays.asList(t));
+
+        Data.clear();
+        arrayList.clear();
+
 
       myRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -69,6 +69,9 @@ public class PV2History extends Fragment {
         String[] t = new String[0];
         Data = new ArrayList<>(Arrays.asList(t));
 
+        Data.clear();
+        arrayList.clear();
+
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
