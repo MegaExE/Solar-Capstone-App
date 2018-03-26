@@ -95,8 +95,6 @@ public class PV1History extends Fragment {
                    // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
                 for(int i = (Data.size()-1); i > (Data.size() - 10); i--) {
-
-
                     arrayList.add(Data.get(i));
                 }
                 //Adds checkbox to the listview
