@@ -68,8 +68,13 @@ public class PV1History extends Fragment {
     public void onStart(){
         super.onStart();
 
+
         String[] t = new String[0];
         Data = new ArrayList<>(Arrays.asList(t));
+
+        Data.clear();
+        arrayList.clear();
+
 
       myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -90,8 +95,6 @@ public class PV1History extends Fragment {
                    // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
                 for(int i = (Data.size()-1); i > (Data.size() - 10); i--) {
-
-
                     arrayList.add(Data.get(i));
                 }
                 //Adds checkbox to the listview
