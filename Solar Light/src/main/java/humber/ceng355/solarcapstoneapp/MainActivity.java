@@ -52,11 +52,12 @@ public class MainActivity extends AppCompatActivity {
         setupToolbar();
 
         //Display the image beside each selection in the Navigation Drawer
-        DataModel[] drawerItem = new DataModel[4];
-        drawerItem[0] = new DataModel(R.drawable.table, "PV1");
-        drawerItem[1] = new DataModel(R.drawable.table, "PV2");
-        drawerItem[2] = new DataModel(R.drawable.table, "PV3");
-        drawerItem[3] = new DataModel(R.drawable.table,"PV4");
+        DataModel[] drawerItem = new DataModel[5];
+        drawerItem[0] = new DataModel(R.drawable.table, "Home");
+        drawerItem[1] = new DataModel(R.drawable.table, "PV1");
+        drawerItem[2] = new DataModel(R.drawable.table, "PV2");
+        drawerItem[3] = new DataModel(R.drawable.table, "PV3");
+        drawerItem[4] = new DataModel(R.drawable.table,"PV4");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -123,15 +124,18 @@ public class MainActivity extends AppCompatActivity {
 
         switch (position) {
             case 0:
-                fragment = new SolarPV1();
+                fragment = new HomeScreen();
                 break;
             case 1:
-                fragment = new SolarPV2();
+                fragment = new SolarPV1();
                 break;
             case 2:
-                fragment = new SolarPV3();
+                fragment = new SolarPV2();
                 break;
             case 3:
+                fragment = new SolarPV3();
+                break;
+            case 4:
                 fragment = new SolarPV4();
                 break;
 
