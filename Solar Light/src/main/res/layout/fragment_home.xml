@@ -27,7 +27,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="41dp"
         android:gravity="center_horizontal"
-        android:text="@string/PV1"
+        android:text="@string/Home"
         android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"

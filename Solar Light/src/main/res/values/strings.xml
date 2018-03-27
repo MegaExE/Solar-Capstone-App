@@ -9,14 +9,10 @@
         <item>PV4</item>
     </string-array>
 
-
+    <string name="Web">Web Application</string>
     <string name="HumberCollege">HumberCollege</string>
     <string name="About">About</string>
 
-    <string name="PV1">Solar Panel PV1</string>
-    <string name="PV2">Solar Panel PV2</string>
-    <string name="PV3">Solar Panel PV3</string>
-    <string name="PV4">Solar Panel PV4</string>
     <string name="Power">Power:</string>
     <string name="Dailyyield">Daily yield:</string>
     <string name="Totalyield">Total yield:</string>
@@ -25,16 +21,23 @@
     <string name="section_format">Hello World from section: %1$d</string>
 
 
+    <!-- Home -->
+    <string name="Home">Solar Capstone Project </string>
+
     <!-- PV1 -->
+    <string name="PV1">Solar Panel PV1</string>
     <string name="PV1Log">PV1 Log</string>
 
     <!-- PV2 -->
+    <string name="PV2">Solar Panel PV2</string>
     <string name="PV2Log">PV2 Log</string>
 
     <!-- PV3 -->
+    <string name="PV3">Solar Panel PV3</string>
     <string name="PV3Log">PV3 Log</string>
 
     <!-- PV4 -->
+    <string name="PV4">Solar Panel PV4</string>
     <string name="PV4Log">PV4 Log</string>
 
 
