@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Display the image beside each selection in the Navigation Drawer
         DataModel[] drawerItem = new DataModel[5];
-        drawerItem[0] = new DataModel(R.drawable.table, "Home");
+        drawerItem[0] = new DataModel(R.drawable.table, "Solar Capstone");
         drawerItem[1] = new DataModel(R.drawable.table, "PV1");
         drawerItem[2] = new DataModel(R.drawable.table, "PV2");
         drawerItem[3] = new DataModel(R.drawable.table, "PV3");
@@ -69,8 +70,13 @@ public class MainActivity extends AppCompatActivity {
         setupDrawerToggle();
 
 
+
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, ).commit();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+
+        ft.replace(R.id.content_frame,new HomeScreen());
+
+        ft.commit();
 
 
     }
