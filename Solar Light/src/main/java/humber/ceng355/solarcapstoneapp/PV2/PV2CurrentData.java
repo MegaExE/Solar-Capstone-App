@@ -27,6 +27,7 @@ public class PV2CurrentData extends Fragment {
     public PV2CurrentData() {
     }
 
+    //Declare Reference
     DatabaseReference myRef;
 
     @Override

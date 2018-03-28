@@ -33,6 +33,7 @@ public class PV1History extends Fragment {
     public PV1History() {
     }
 
+    //Declare Reference
     DatabaseReference myRef;
 
     //Declare Arraylist
@@ -69,9 +70,9 @@ public class PV1History extends Fragment {
         super.onStart();
 
 
-        String[] t = new String[0];
-        Data = new ArrayList<>(Arrays.asList(t));
-
+        String[] info = new String[0];
+        Data = new ArrayList<>(Arrays.asList(info));
+        //Clear the arraylist
         Data.clear();
         arrayList.clear();
 
@@ -81,8 +82,6 @@ public class PV1History extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-
-
                 for(DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
                     String PV1_Date = dss.child("Date").getValue(String.class);
@@ -90,18 +89,20 @@ public class PV1History extends Fragment {
                     String PV1_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV1_Total = dss.child("Total_yield").getValue(String.class);
 
-                    Data.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
+                    //Add the information to the arraylist
+                    Data.add(PV1_Date + "     " + PV1_Power + "     " + PV1_Daily);
 
                    // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
+                int num = 1;
                 for(int i = (Data.size()-1); i > (Data.size() - 25); i--) {
-                    arrayList.add(Data.get(i));
+                    //Display the solar panel data on the Listview
+                    arrayList.add(num+"     "+Data.get(i));
+                    num++;
                 }
                 //Adds checkbox to the listview
                 adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, arrayList);
                 chl.setAdapter(adapter);
-
-
             }
 
             @Override

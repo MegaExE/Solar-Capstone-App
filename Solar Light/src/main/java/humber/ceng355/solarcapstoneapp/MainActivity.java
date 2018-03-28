@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Display the image beside each selection in the Navigation Drawer
         DataModel[] drawerItem = new DataModel[5];
-        drawerItem[0] = new DataModel(R.drawable.table, "Solar Capstone");
+        drawerItem[0] = new DataModel(R.drawable.table, "Home");
         drawerItem[1] = new DataModel(R.drawable.table, "PV1");
         drawerItem[2] = new DataModel(R.drawable.table, "PV2");
         drawerItem[3] = new DataModel(R.drawable.table, "PV3");
