@@ -50,8 +50,8 @@
     The information that is being displayed is the total amount of Power, daily yield and total yield of each solar panel PV.  </string>
 
     <!-- Home -->
-    <string name="SolarPanel"></string>
-    <string name="Benefit"> The benefit of this data is so that the Humber community can see how solar panels work and to see how much solar energy and power humber uses on a daily, monthly, and yearly basis</string>
+    <string name="SolarPanel">The benefit of solar energy is it is more environmentally friendly then burning fossil fuels to produce energy.  Also, it reduces the amount of greenhouse gas emissions.</string>
+    <string name="Benefit">The benefit of this data is so that the Humber community can see how much solar energy and power the solar panel retrieved. </string>
     <string name="PV1module">Sunny Webbox</string>
     <string name="PV2module">Envoy Communications</string>
     <string name="PV3module">Outback Power</string>
