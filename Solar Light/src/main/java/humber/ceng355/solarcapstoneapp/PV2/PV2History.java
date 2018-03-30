@@ -88,7 +88,7 @@ public class PV2History extends Fragment {
                     String PV2_Total = dss.child("Total_yield").getValue(String.class);
 
                     //Add the information to the arraylist
-                    Data.add(PV2_Date + "  " + PV2_Power + " " + PV2_Daily);
+                    Data.add(PV2_Date + "     " + PV2_Power + "           " + PV2_Daily);
                 }
                 for(int i = (Data.size()-1); i > (Data.size() - 25); i--) {
                     //Display the solar panel data on the Listview

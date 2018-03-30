@@ -210,6 +210,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent launch = new Intent(Intent.ACTION_VIEW, url);
                 startActivity(launch);
                 break;
+
+            case R.id.SolarCapstoneWebApp:
+                Uri url2 = Uri.parse("https://j-liang.github.io/solarcapstone_web/");
+                Intent launch2 = new Intent(Intent.ACTION_VIEW, url2);
+                startActivity(launch2);
+                break;
+
         }
 
         return super.onOptionsItemSelected(item);

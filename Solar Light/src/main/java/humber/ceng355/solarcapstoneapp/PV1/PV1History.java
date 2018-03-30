@@ -90,15 +90,14 @@ public class PV1History extends Fragment {
                     String PV1_Total = dss.child("Total_yield").getValue(String.class);
 
                     //Add the information to the arraylist
-                    Data.add(PV1_Date + "     " + PV1_Power + "     " + PV1_Daily);
+                    Data.add(PV1_Date + "     " + PV1_Power + "           " + PV1_Daily);
 
                    // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
-                int num = 1;
+
                 for(int i = (Data.size()-1); i > (Data.size() - 25); i--) {
                     //Display the solar panel data on the Listview
-                    arrayList.add(num+"     "+Data.get(i));
-                    num++;
+                    arrayList.add(Data.get(i));
                 }
                 //Adds checkbox to the listview
                 adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, arrayList);

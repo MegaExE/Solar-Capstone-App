@@ -92,7 +92,7 @@ public class PV4History extends Fragment {
                     String PV4_Total = dss.child("Total_yield").getValue(String.class);
 
                     //Add the information to the arraylist
-                    Data.add(PV4_Date + "  " + PV4_Power + " " + PV4_Daily);
+                    Data.add(PV4_Date + "     " + PV4_Power + "           " + PV4_Daily);
 
                     // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
