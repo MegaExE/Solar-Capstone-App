@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Display the image beside each selection in the Navigation Drawer
         DataModel[] drawerItem = new DataModel[5];
-        drawerItem[0] = new DataModel(R.drawable.table, "Solar Capstone");
+        drawerItem[0] = new DataModel(R.drawable.table, "Home");
         drawerItem[1] = new DataModel(R.drawable.table, "PV1");
         drawerItem[2] = new DataModel(R.drawable.table, "PV2");
         drawerItem[3] = new DataModel(R.drawable.table, "PV3");
@@ -194,6 +194,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent launch = new Intent(Intent.ACTION_VIEW, url);
                 startActivity(launch);
                 break;
+
+            case R.id.SolarCapstoneWebApp:
+                Uri url2 = Uri.parse("https://j-liang.github.io/solarcapstone_web/");
+                Intent launch2 = new Intent(Intent.ACTION_VIEW, url2);
+                startActivity(launch2);
+                break;
+
         }
 
         return super.onOptionsItemSelected(item);

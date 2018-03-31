@@ -28,6 +28,7 @@ public class PV1CurrentData extends Fragment {
     public PV1CurrentData() {
     }
 
+    //Declare Reference
     DatabaseReference myRef;
 
     @Override
@@ -36,9 +37,6 @@ public class PV1CurrentData extends Fragment {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("PV1");
         View rootView = inflater.inflate(R.layout.fragment_solarpv1, container, false);
-
-
-
 
         return rootView;
     }
@@ -52,7 +50,6 @@ public class PV1CurrentData extends Fragment {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
 
-
                 for(DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
                     String PV1_Date = dss.child("Date").getValue(String.class);
@@ -64,7 +61,6 @@ public class PV1CurrentData extends Fragment {
                     TextView PV1PowerValueTV = getActivity().findViewById(R.id.PV1_Power_Value);
                     TextView PV1DailyValueTV = getActivity().findViewById(R.id.PV1_Dialyyield_Value);
                     TextView PV1TotalValueTV = getActivity().findViewById(R.id.PV1_Totalyield_Value);
-
 
                     //Display the Date, Current Power, Daily yield and Total yield that PV1 stored on the firebase
                     PV1DateValueTV.setText(PV1_Date);

@@ -32,6 +32,7 @@ public class PV4History extends Fragment {
     public PV4History() {
     }
 
+    //Declare Reference
     DatabaseReference myRef;
 
     //Declare Arraylist
@@ -48,7 +49,7 @@ public class PV4History extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Connection to Firebase Database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-       myRef = database.getReference("PV4");
+        myRef = database.getReference("PV4");
         view = inflater.inflate(R.layout.fragment_history_solarpv4, container, false);
 
         //This section will be storing the Challenges and Task in a String
@@ -68,9 +69,9 @@ public class PV4History extends Fragment {
         super.onStart();
 
 
-        String[] t = new String[0];
-        Data = new ArrayList<>(Arrays.asList(t));
-
+        String[] info = new String[0];
+        Data = new ArrayList<>(Arrays.asList(info));
+        //Clear the arraylist
         Data.clear();
         arrayList.clear();
 
@@ -90,16 +91,17 @@ public class PV4History extends Fragment {
                     String PV4_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV4_Total = dss.child("Total_yield").getValue(String.class);
 
-                    Data.add(PV4_Date + "  " + PV4_Power + " " + PV4_Daily);
+                    //Add the information to the arraylist
+                    Data.add(PV4_Date + "     " + PV4_Power + "           " + PV4_Daily);
 
                     // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
                 for(int i = (Data.size()-1); i > (Data.size() - 25); i--) {
-
-
+                    //Display the solar panel data on the Listview
                     arrayList.add(Data.get(i));
                 }
-                //Adds checkbox to the listview
+
+                //Adds list to the listview
                 adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, arrayList);
                 chl.setAdapter(adapter);
 

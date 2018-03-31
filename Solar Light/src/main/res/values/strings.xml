@@ -2,7 +2,7 @@
     <string name="app_name">Solar Light</string>
 
     <string-array name="navigation_drawer_items_array">
-        <item>Home</item>
+        <item>Solar Light</item>
         <item>PV1</item>
         <item>PV2</item>
         <item>PV3</item>
@@ -20,7 +20,11 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
+    <string name="Date">Date</string>
+    <string name="Powers">Power</string>
+    <string name="Dailyyields">Daily yield</string>
 
+    <string name="web">Web App</string>
     <!-- Home -->
     <string name="Home">Solar Capstone Project </string>
 

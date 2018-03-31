@@ -20,6 +20,13 @@
 
     <item
         style="@style/AppTheme"
+        android:id="@+id/SolarCapstoneWebApp"
+        android:title="@string/web"
+        app:showAsAction="always"
+        android:orderInCategory="1"></item>
+
+    <item
+        style="@style/AppTheme"
         android:id="@+id/About"
         android:title="@string/About"
         app:showAsAction="never"

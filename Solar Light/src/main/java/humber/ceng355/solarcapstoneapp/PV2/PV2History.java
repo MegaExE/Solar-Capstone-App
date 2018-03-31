@@ -32,6 +32,7 @@ public class PV2History extends Fragment {
     public PV2History() {
     }
 
+    //Declare Reference
     DatabaseReference myRef;
 
     //Declare Arraylist
@@ -66,9 +67,9 @@ public class PV2History extends Fragment {
     public void onStart(){
         super.onStart();
 
-        String[] t = new String[0];
-        Data = new ArrayList<>(Arrays.asList(t));
-
+        String[] info = new String[0];
+        Data = new ArrayList<>(Arrays.asList(info));
+        //Clear the arraylist
         Data.clear();
         arrayList.clear();
 
@@ -86,14 +87,11 @@ public class PV2History extends Fragment {
                     String PV2_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV2_Total = dss.child("Total_yield").getValue(String.class);
 
-                    Data.add(PV2_Date + "  " + PV2_Power + " " + PV2_Daily);
-
-
-                    // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
+                    //Add the information to the arraylist
+                    Data.add(PV2_Date + "     " + PV2_Power + "           " + PV2_Daily);
                 }
                 for(int i = (Data.size()-1); i > (Data.size() - 25); i--) {
-
-
+                    //Display the solar panel data on the Listview
                     arrayList.add(Data.get(i));
                 }
                 //Adds checkbox to the listview
