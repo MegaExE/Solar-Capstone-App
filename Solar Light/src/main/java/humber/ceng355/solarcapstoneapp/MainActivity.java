@@ -181,24 +181,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.About:
-                AlertDialog.Builder alertDialogBuilder2 = new AlertDialog.Builder(context);
-                // set title
-                alertDialogBuilder2.setTitle("About");
-                // set dialog message
-                alertDialogBuilder2
-                        .setMessage("About Message: \n")
-                        .setCancelable(false)
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                // if this button is clicked, just close
-                                // the dialog box and do nothing
-                                dialog.cancel();
-                            }
-                        });
-                // create alert dialog
-                AlertDialog alertDialog2 = alertDialogBuilder2.create();
-                // show it
-                alertDialog2.show();
+                Intent intentAbout = new Intent(MainActivity.this, About.class);
+                startActivity(intentAbout);
                 break;
             /*
             case R.id.Setting:
