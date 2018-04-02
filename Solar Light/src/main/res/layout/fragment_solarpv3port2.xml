@@ -12,7 +12,7 @@
         android:id="@+id/PV3_Date_Value2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="7dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/label"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:text="@string/ChargeControllers"
         android:textSize="45dp"
@@ -61,14 +61,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="183dp"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/PV3Port2_Power_Value"
+        app:layout_constraintEnd_toEndOf="@+id/textClock"
+        app:layout_constraintStart_toEndOf="@+id/textClock"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/PV3Port2_Power_Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="71dp"
+        android:layout_marginEnd="70dp"
         android:layout_marginTop="32dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,11 +80,11 @@
         android:id="@+id/PV3Port2_VACin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
         android:layout_marginTop="40dp"
         android:text="@string/PV3_VACin"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/PV3Port2_Power"
+        app:layout_constraintStart_toStartOf="@+id/PV3Port2_Power"
         app:layout_constraintTop_toBottomOf="@+id/PV3Port2_Power" />
 
     <TextView
@@ -100,7 +101,7 @@
         android:id="@+id/Lastupdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="123dp"
         android:layout_marginEnd="56dp"
         android:layout_marginStart="58dp"
         android:text="@string/LastUpdate"
@@ -112,12 +113,12 @@
         android:id="@+id/textClock"
         android:layout_width="160dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="81dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginBottom="49dp"
+        android:layout_marginTop="44dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/PV3Port2_Power"
+        app:layout_constraintBottom_toBottomOf="@+id/PV3Port2_BatteryVolt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/label" />
+        app:layout_constraintTop_toBottomOf="@+id/label" />
 
 </android.support.constraint.ConstraintLayout>
