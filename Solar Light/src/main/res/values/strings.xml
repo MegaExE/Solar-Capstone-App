@@ -16,13 +16,14 @@
     <string name="Power">Power:</string>
     <string name="Dailyyield">Daily yield:</string>
     <string name="Totalyield">Total yield:</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <string name="Date">Date</string>
-    <string name="Powers">Power</string>
-    <string name="Dailyyields">Daily yield</string>
+    <string name="LastUpdate">Last Update:</string>
+
+    <string name="Date">Date:</string>
+    <string name="Powers">Power:</string>
+    <string name="Dailyyields">Daily yield:</string>
 
     <string name="web">Web App</string>
     <!-- Home -->
@@ -39,6 +40,15 @@
     <!-- PV3 -->
     <string name="PV3">Solar Panel PV3</string>
     <string name="PV3Log">PV3 Log</string>
+
+    <string name="Inverters">Inverters</string>
+    <string name="PV3_BV">BatteryVolt:</string>
+    <string name="PV3_VACin">VACin:</string>
+    <string name="PV3_VACout">VACout:</string>
+
+    <string name="ChargeControllers">Charge Controllers</string>
+    <string name="PV3_Power">Power:</string>
+
 
     <!-- PV4 -->
     <string name="PV4">Solar Panel PV4</string>
