@@ -31,6 +31,7 @@ public class PV1CurrentData extends Fragment {
     //Declare Reference
     DatabaseReference myRef;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Connection to Firebase Database
@@ -38,19 +39,19 @@ public class PV1CurrentData extends Fragment {
         myRef = database.getReference("PV1");
         View rootView = inflater.inflate(R.layout.fragment_solarpv1, container, false);
 
+
         return rootView;
     }
 
-    public void onStart(){
+    public void onStart() {
         super.onStart();
-
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
 
-                for(DataSnapshot dss : dataSnapshot.getChildren()) {
+                for (DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
                     String PV1_Date = dss.child("Date").getValue(String.class);
                     String PV1_Power = dss.child("Power").getValue(String.class);
@@ -80,5 +81,4 @@ public class PV1CurrentData extends Fragment {
 
 
     }
-
 }

@@ -68,9 +68,9 @@ public class PV2CurrentData extends Fragment {
 
                     //Display the Date, Current Power, Daily yield and Total yield that PV1 stored on the firebase
                     PV1DateValueTV.setText(PV2_Date);
-                    PV1PowerValueTV.setText(PV2_Power);
-                    PV1DailyValueTV.setText(PV2_Daily);
-                    PV1TotalValueTV.setText(PV2_Total);
+                    PV1PowerValueTV.setText(PV2_Power.trim());
+                    PV1DailyValueTV.setText(PV2_Daily.trim());
+                    PV1TotalValueTV.setText(PV2_Total.trim());
                 }
 
             }
