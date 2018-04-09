@@ -43,7 +43,7 @@ public class SolarPV3 extends Fragment {
     }
     private class sliderAdapter extends FragmentPagerAdapter {
 
-        final  String tabs[]={"Inverters","Charge Controllers", "Log"};
+        final  String tabs[]={"Inverters","Charge Controllers", "Inverters Log", "Charge Controllers Log"};
         public sliderAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -55,15 +55,18 @@ public class SolarPV3 extends Fragment {
             }
             else if(position == 1){
                 return new PV3Port2CurrentData();
+            }
+            else if(position == 2){
+                return new PV3Port1History();
             } else{
-                return new PV3History();
+                return new PV3Port2History();
             }
 
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
         @Override
         public CharSequence getPageTitle(int position) {
