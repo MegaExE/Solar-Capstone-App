@@ -10,14 +10,14 @@
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="384dp"
+        android:layout_width="388dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="13dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/PV3_Date_Value"
-        app:layout_constraintStart_toStartOf="@+id/PV3_Date_Value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dailyyield"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="19dp"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/power"
         app:layout_constraintTop_toTopOf="@+id/power" />
@@ -52,19 +52,19 @@
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="34dp"
+        android:layout_marginTop="15dp"
         android:text="@string/Date"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/list"
-        app:layout_constraintStart_toStartOf="@+id/list" />
+        app:layout_constraintStart_toStartOf="@+id/label"
+        app:layout_constraintTop_toBottomOf="@+id/label" />
 
     <TextView
         android:id="@+id/power"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="26dp"
         android:text="@string/Powers"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/list"
@@ -74,11 +74,11 @@
         android:id="@+id/dailyyield"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="18dp"
         android:text="@string/Dailyyields"
         android:textSize="24sp"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label" />
 
 </android.support.constraint.ConstraintLayout>
