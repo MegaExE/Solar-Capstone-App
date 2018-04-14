@@ -58,10 +58,10 @@ public class PV1CurrentData extends Fragment {
                     String PV1_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV1_Total = dss.child("Total_yield").getValue(String.class);
                     //Declaring textviews
-                    TextView PV1DateValueTV = getActivity().findViewById(R.id.PV1_Date_Value);
-                    TextView PV1PowerValueTV = getActivity().findViewById(R.id.PV1_Power_Value);
-                    TextView PV1DailyValueTV = getActivity().findViewById(R.id.PV1_Dialyyield_Value);
-                    TextView PV1TotalValueTV = getActivity().findViewById(R.id.PV1_Totalyield_Value);
+                    TextView PV1DateValueTV = getActivity().findViewById(R.id.Date_Value);
+                    TextView PV1PowerValueTV = getActivity().findViewById(R.id.Power_Value);
+                    TextView PV1DailyValueTV = getActivity().findViewById(R.id.Dialyyield_Value);
+                    TextView PV1TotalValueTV = getActivity().findViewById(R.id.Totalyield_Value);
 
                     //Display the Date, Current Power, Daily yield and Total yield that PV1 stored on the firebase
                     PV1DateValueTV.setText(PV1_Date);

@@ -69,13 +69,12 @@
 
     <TextView
         android:id="@+id/PV3Port1_VACin_Value"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
+        android:layout_width="132dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginTop="32dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/PV3Port1_VACin"
         app:layout_constraintTop_toBottomOf="@+id/PV3Port1_BatteryVolt_Value" />
 
     <TextView
