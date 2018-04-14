@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/PV1_Date_Value"
+        android:id="@+id/Date_Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="131dp"
@@ -44,7 +44,7 @@
         android:text="@string/Power"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/PV1_Dailyyield"
-        app:layout_constraintEnd_toStartOf="@+id/PV1_Power_Value"
+        app:layout_constraintEnd_toStartOf="@+id/Power_Value"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PV1_Time" />
 
@@ -57,30 +57,30 @@
         android:layout_marginStart="28dp"
         android:text="@string/Dailyyield"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/PV1_Totalyield_Value"
-        app:layout_constraintEnd_toStartOf="@+id/PV1_Dialyyield_Value"
+        app:layout_constraintBottom_toTopOf="@+id/Totalyield_Value"
+        app:layout_constraintEnd_toStartOf="@+id/Dialyyield_Value"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PV1_Power" />
 
     <TextView
-        android:id="@+id/PV1_Power_Value"
-        android:layout_width="87dp"
-        android:layout_height="28dp"
+        android:id="@+id/Power_Value"
+        android:layout_width="103dp"
+        android:layout_height="29dp"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="70dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/PV1_Dialyyield_Value"
+        app:layout_constraintBottom_toTopOf="@+id/Dialyyield_Value"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/PV1_Power" />
 
     <TextView
-        android:id="@+id/PV1_Dialyyield_Value"
+        android:id="@+id/Dialyyield_Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="30dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/PV1_Totalyield_Value"
+        app:layout_constraintBottom_toTopOf="@+id/Totalyield_Value"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/PV1_Dailyyield" />
 
@@ -92,12 +92,12 @@
         android:layout_marginStart="28dp"
         android:text="@string/Totalyield"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/PV1_Totalyield_Value"
-        app:layout_constraintEnd_toStartOf="@+id/PV1_Totalyield_Value"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Totalyield_Value"
+        app:layout_constraintEnd_toStartOf="@+id/Totalyield_Value"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/PV1_Totalyield_Value"
+        android:id="@+id/Totalyield_Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="78dp"
@@ -114,9 +114,9 @@
         android:layout_marginBottom="14dp"
         android:layout_marginStart="61dp"
         android:text="@string/LastUpdate"
-        app:layout_constraintBottom_toTopOf="@+id/PV1_Date_Value"
+        app:layout_constraintBottom_toTopOf="@+id/Date_Value"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PV1_Totalyield_Value" />
+        app:layout_constraintTop_toBottomOf="@+id/Totalyield_Value" />
 
     <TextClock
         android:id="@+id/PV1_Time"
