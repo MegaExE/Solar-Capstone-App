@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/PV4_Date_Value"
+        android:id="@+id/Date_Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="131dp"
@@ -115,7 +115,7 @@
         android:layout_marginEnd="61dp"
         android:layout_marginStart="61dp"
         android:text="@string/LastUpdate"
-        app:layout_constraintBottom_toTopOf="@+id/PV4_Date_Value"
+        app:layout_constraintBottom_toTopOf="@+id/Date_Value"
         app:layout_constraintEnd_toStartOf="@+id/Dialyyield_Value"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Totalyield_Value" />

@@ -57,7 +57,7 @@ public class PV4CurrentData extends Fragment {
                     String PV4_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV4_Total = dss.child("Total_yield").getValue(String.class);
                     //Declaring textviews
-                    TextView PV1DateValueTV = getActivity().findViewById(R.id.PV4_Date_Value);
+                    TextView PV1DateValueTV = getActivity().findViewById(R.id.Date_Value);
                     TextView PV1PowerValueTV = getActivity().findViewById(R.id.Power_Value);
                     TextView PV1DailyValueTV = getActivity().findViewById(R.id.Dialyyield_Value);
                     TextView PV1TotalValueTV = getActivity().findViewById(R.id.Totalyield_Value);
