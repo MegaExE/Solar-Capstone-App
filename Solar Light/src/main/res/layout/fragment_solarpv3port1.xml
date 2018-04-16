@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/PV3_Date_Value"
+        android:id="@+id/Date_Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
@@ -39,10 +39,10 @@
         android:layout_marginStart="53dp"
         android:text="@string/PV3_BV"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/PV3Port1_BatteryVolt_Value"
-        app:layout_constraintEnd_toStartOf="@+id/PV3Port1_BatteryVolt_Value"
+        app:layout_constraintBottom_toBottomOf="@+id/BatteryVolt_Value"
+        app:layout_constraintEnd_toStartOf="@+id/BatteryVolt_Value"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/PV3Port1_BatteryVolt_Value" />
+        app:layout_constraintTop_toTopOf="@+id/BatteryVolt_Value" />
 
     <TextView
         android:id="@+id/PV3Port1_VACin"
@@ -52,12 +52,12 @@
         android:layout_marginStart="51dp"
         android:text="@string/PV3_VACin"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/PV3Port1_VACin_Value"
-        app:layout_constraintEnd_toStartOf="@+id/PV3Port1_VACin_Value"
+        app:layout_constraintBaseline_toBaselineOf="@+id/VACin_Value"
+        app:layout_constraintEnd_toStartOf="@+id/VACin_Value"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/PV3Port1_BatteryVolt_Value"
+        android:id="@+id/BatteryVolt_Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="46dp"
@@ -68,14 +68,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/PV3Port1_VACin_Value"
+        android:id="@+id/VACin_Value"
         android:layout_width="132dp"
         android:layout_height="32dp"
         android:layout_marginEnd="80dp"
         android:layout_marginTop="32dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PV3Port1_BatteryVolt_Value" />
+        app:layout_constraintTop_toBottomOf="@+id/BatteryVolt_Value" />
 
     <TextView
         android:id="@+id/PV3Port1_VACout"
@@ -89,16 +89,16 @@
         app:layout_constraintTop_toBottomOf="@+id/PV3Port1_VACin" />
 
     <TextView
-        android:id="@+id/PV3Port1_VACout_Value"
+        android:id="@+id/VACout_Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="40dp"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/PV3Port1_VACin_Value"
-        app:layout_constraintStart_toStartOf="@+id/PV3_Date_Value"
-        app:layout_constraintTop_toBottomOf="@+id/PV3Port1_VACin_Value" />
+        app:layout_constraintEnd_toEndOf="@+id/VACin_Value"
+        app:layout_constraintStart_toStartOf="@+id/Date_Value"
+        app:layout_constraintTop_toBottomOf="@+id/VACin_Value" />
 
     <TextView
         android:id="@+id/Lastupdate"
@@ -109,7 +109,7 @@
         android:layout_marginStart="58dp"
         android:text="@string/LastUpdate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/PV3_Date_Value"
+        app:layout_constraintEnd_toEndOf="@+id/Date_Value"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextClock

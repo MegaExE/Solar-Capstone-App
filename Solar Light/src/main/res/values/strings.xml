@@ -46,11 +46,13 @@
     <string name="PV3name">PV3</string>
 
     <string name="Inverters">Inverters</string>
+    <string name="InvertersLog">Inverters Log</string>
     <string name="PV3_BV">BatteryVolt:</string>
     <string name="PV3_VACin">VACin:</string>
     <string name="PV3_VACout">VACout:</string>
 
     <string name="ChargeControllers">Charge Controllers</string>
+    <string name="ChargeControllersLog">Charge Controllers Log</string>
     <string name="PV3_Power">Power:</string>
 
 

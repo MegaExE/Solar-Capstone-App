@@ -16,6 +16,7 @@
         android:id="@+id/HC"
         android:title="@string/HumberCollege"
         app:showAsAction="always"
+        android:icon="@mipmap/humbercollege"
         android:orderInCategory="1"></item>
 
     <item
@@ -23,6 +24,7 @@
         android:id="@+id/SolarCapstoneWebApp"
         android:title="@string/web"
         app:showAsAction="always"
+        android:icon="@mipmap/sun"
         android:orderInCategory="1"></item>
 
     <item
