@@ -58,10 +58,10 @@ public class PV3Port2CurrentData extends Fragment {
                     Double PV3_VACin = dss.child("VACin").getValue(Double.class);
 
                     //Declaring textviews
-                    TextView PV3DateTV = getActivity().findViewById(R.id.Date_Value);
-                    TextView PV3BatteryVoltTV = getActivity().findViewById(R.id.BatteryVolt_Value);
+                    TextView PV3DateTV = getActivity().findViewById(R.id.Date_Value2);
+                    TextView PV3BatteryVoltTV = getActivity().findViewById(R.id.BatteryVolt_Value2);
                     TextView PV3PowerTV = getActivity().findViewById(R.id.Power_Value);
-                    TextView PV3VACinTV = getActivity().findViewById(R.id.VACin_Value);
+                    TextView PV3VACinTV = getActivity().findViewById(R.id.VACin_Value2);
 
 
                     //Display the Date, BatteryVolt, Power and VACin that PV3b stored on the firebase

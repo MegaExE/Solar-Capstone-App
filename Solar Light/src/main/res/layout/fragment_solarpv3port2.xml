@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/Date_Value"
+        android:id="@+id/Date_Value2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
@@ -106,7 +106,7 @@
         android:layout_marginStart="58dp"
         android:text="@string/LastUpdate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/Date_Value"
+        app:layout_constraintEnd_toEndOf="@+id/Date_Value2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextClock

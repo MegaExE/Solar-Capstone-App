@@ -12,8 +12,8 @@
         android:id="@+id/list"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="6dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="2dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,12 +29,14 @@
         android:id="@+id/date3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="26dp"
         android:text="@string/Date"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/power3"
@@ -49,8 +51,8 @@
         android:id="@+id/dailyyield3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="13dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="13dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/label" />
@@ -70,32 +72,38 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="6dp"
         android:text="@string/PV3_BV"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
-        app:layout_constraintEnd_toStartOf="@+id/textView16" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintStart_toEndOf="@+id/date3"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="3dp"
         android:text="@string/Power"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView17"
-        app:layout_constraintEnd_toStartOf="@+id/textView17" />
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/PV3_VACin"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/dailyyield3"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView16" />
 
 </android.support.constraint.ConstraintLayout>
