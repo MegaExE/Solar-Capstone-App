@@ -42,7 +42,6 @@ public class PV4History extends Fragment {
 
     //Declare ListView
     ListView chl;
-
     View view;
 
     @Override
@@ -52,12 +51,11 @@ public class PV4History extends Fragment {
         myRef = database.getReference("PV4");
         view = inflater.inflate(R.layout.fragment_history_solarpv4, container, false);
 
-        //This section will be storing the Challenges and Task in a String
+        //This section will be storing the entries into a String
         String[] items = new String[0];
 
-        //Create an ArrayList object to store the challenges and tasks
+        //Create an ArrayList object to store the entries
         arrayList = new ArrayList<>(Arrays.asList(items));
-
 
         //Create an instance of ListView
         chl=(ListView) view.findViewById(R.id.list);
@@ -68,21 +66,18 @@ public class PV4History extends Fragment {
     public void onStart(){
         super.onStart();
 
-
+        //Declare the arraylist named Data
         String[] info = new String[0];
         Data = new ArrayList<>(Arrays.asList(info));
         //Clear the arraylist
         Data.clear();
         arrayList.clear();
 
-
-
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-
 
                 for(DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
@@ -93,7 +88,6 @@ public class PV4History extends Fragment {
 
                     //Add the information to the arraylist
                     Data.add(PV4_Date + "     " + PV4_Power + "      " + PV4_Daily);
-
                     // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
                 for(int i = (Data.size()-1); i > (Data.size() - 25); i--) {
@@ -104,8 +98,6 @@ public class PV4History extends Fragment {
                 //Adds list to the listview
                 adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, arrayList);
                 chl.setAdapter(adapter);
-
-
             }
 
             @Override
@@ -114,9 +106,5 @@ public class PV4History extends Fragment {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
-
-
     }
-
 }

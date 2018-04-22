@@ -69,16 +69,11 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerToggle();
 
-
-
+        //Set the default fragment to open to the Home screen when the app opens.
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
-
         ft.replace(R.id.content_frame,new HomeScreen());
-
         ft.commit();
-
-
     }
 
     final Context context = this;

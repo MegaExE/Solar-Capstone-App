@@ -42,7 +42,6 @@ public class PV2History extends Fragment {
 
     //Declare ListView
     ListView chl;
-
     View view;
 
     @Override
@@ -52,12 +51,11 @@ public class PV2History extends Fragment {
         myRef = database.getReference("PV2");
         view = inflater.inflate(R.layout.fragment_history_solarpv2, container, false);
 
-        //This section will be storing the Challenges and Task in a String
+        //This section will be storing the entries into a String
         String[] items = new String[0];
 
-        //Create an ArrayList object to store the challenges and tasks
+        //Create an ArrayList object to store the entries
         arrayList = new ArrayList<>(Arrays.asList(items));
-
 
         //Create an instance of ListView
         chl=(ListView) view.findViewById(R.id.list);
@@ -67,6 +65,7 @@ public class PV2History extends Fragment {
     public void onStart(){
         super.onStart();
 
+        //Declare arraylist name Data
         String[] info = new String[0];
         Data = new ArrayList<>(Arrays.asList(info));
         //Clear the arraylist
@@ -78,7 +77,6 @@ public class PV2History extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-
 
                 for(DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
@@ -94,11 +92,9 @@ public class PV2History extends Fragment {
                     //Display the solar panel data on the Listview
                     arrayList.add(Data.get(i));
                 }
-                //Adds checkbox to the listview
+                //Adds list to the listview
                 adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, arrayList);
                 chl.setAdapter(adapter);
-
-
             }
 
             @Override
@@ -107,7 +103,6 @@ public class PV2History extends Fragment {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
 
     }
 

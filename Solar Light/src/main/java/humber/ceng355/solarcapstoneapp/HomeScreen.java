@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.firebase.database.DatabaseReference;
-
 
 /**
  * Solar Capstone
@@ -17,17 +15,10 @@ import com.google.firebase.database.DatabaseReference;
 public class HomeScreen extends Fragment {
     public HomeScreen () {
     }
-
-    DatabaseReference myRef;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-
-
-
-
         return rootView;
     }
 

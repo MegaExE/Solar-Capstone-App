@@ -32,6 +32,7 @@ public class PV3Port2History extends Fragment {
     public PV3Port2History() {
     }
 
+    //Declare database reference
     DatabaseReference myRef;
 
     //Declare Arraylist
@@ -41,7 +42,6 @@ public class PV3Port2History extends Fragment {
 
     //Declare ListView
     ListView chl;
-
     View view;
 
     @Override
@@ -51,12 +51,11 @@ public class PV3Port2History extends Fragment {
        myRef = database.getReference("PV3b");
         view = inflater.inflate(R.layout.fragment_history_solarpv3port2, container, false);
 
-        //This section will be storing the Challenges and Task in a String
+        //This section will be storing the entries into a String
         String[] items = new String[0];
 
-        //Create an ArrayList object to store the challenges and tasks
+        //Create an ArrayList object to store the entries
         arrayList = new ArrayList<>(Arrays.asList(items));
-
 
         //Create an instance of ListView
         chl=(ListView) view.findViewById(R.id.list);
@@ -67,9 +66,10 @@ public class PV3Port2History extends Fragment {
     public void onStart(){
         super.onStart();
 
+        //Declare the arraylist named data
         String[] t = new String[0];
         Data = new ArrayList<>(Arrays.asList(t));
-
+        //Clear the arraylist and data
         Data.clear();
         arrayList.clear();
 
@@ -79,7 +79,6 @@ public class PV3Port2History extends Fragment {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
 
-
                 for(DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
                     String PV3_Date = dss.child("Date").getValue(String.class);
@@ -87,8 +86,8 @@ public class PV3Port2History extends Fragment {
                     Double PV3_Power = dss.child("Power").getValue(Double.class);
                     Double PV3_VACin = dss.child("VACin").getValue(Double.class);
 
+                    //Stores the entries into the arraylist named Data
                     Data.add(PV3_Date +"    "+ Double.toString(PV3_BatteryVolt)+"V    "+ Double.toString(PV3_Power)+"W     "+Double.toString(PV3_VACin)+"V");
-                
                     // arrayList.add(PV1_Date + "  " + PV1_Power + " " + PV1_Daily);
                 }
                 for(int i = (Data.size()-1); i > (Data.size() - 25); i--) {
@@ -98,8 +97,6 @@ public class PV3Port2History extends Fragment {
                 //Adds checkbox to the listview
                 adapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, arrayList);
                 chl.setAdapter(adapter);
-
-
             }
 
             @Override
@@ -108,8 +105,5 @@ public class PV3Port2History extends Fragment {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-
     }
-
-
 }

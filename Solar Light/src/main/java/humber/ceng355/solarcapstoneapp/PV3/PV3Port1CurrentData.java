@@ -28,6 +28,7 @@ public class PV3Port1CurrentData extends Fragment {
     public PV3Port1CurrentData() {
     }
 
+    //Declare database reference
     DatabaseReference myRef;
 
     @Override
@@ -62,7 +63,6 @@ public class PV3Port1CurrentData extends Fragment {
                     TextView PV3BatteryVoltTV = getActivity().findViewById(R.id.BatteryVolt_Value);
                     TextView PV3VACinTV = getActivity().findViewById(R.id.VACin_Value);
                     TextView PV3VACoutTV = getActivity().findViewById(R.id.VACout_Value);
-
 
                     //Display the Date, BatteryVolt, VACin and VACout that PV3a stored on the firebase
                     PV3DateTV.setText(PV3_Date);

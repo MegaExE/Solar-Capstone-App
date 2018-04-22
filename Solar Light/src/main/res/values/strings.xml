@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Solar Light</string>
 
+    <!--Navigation drawer Names -->
     <string-array name="navigation_drawer_items_array">
         <item>Solar Light</item>
         <item>PV1</item>
@@ -10,30 +11,41 @@
     </string-array>
 
     <string name="Web">Web Application</string>
+    <string name="web">Web App</string>
     <string name="HumberCollege">HumberCollege</string>
-
-
     <string name="Power">Power:</string>
     <string name="Dailyyield">Daily yield:</string>
     <string name="Totalyield">Total yield:</string>
     <string name="action_settings">Settings</string>
-
-
     <string name="LastUpdate">Last Update:</string>
-
     <string name="Date">Date:</string>
     <string name="Powers">Power:</string>
     <string name="Dailyyields">Daily yield:</string>
 
-    <string name="web">Web App</string>
+
     <!-- Home -->
     <string name="Home">Solar Capstone Project </string>
+    <string name="SolarPanel">The benefit of solar energy is it is more environmentally friendly then burning fossil fuels to produce energy.  Also, it reduces the amount of greenhouse gas emissions.</string>
+    <string name="Benefit">The benefit of this data is so that the Humber community can see how much solar energy and power the solar panel retrieved. </string>
+    <string name="PV1module">Sunny Webbox</string>
+    <string name="PV2module">Envoy Communications</string>
+    <string name="PV3module">Outback Power</string>
+    <string name="PV4module">Sunny Webbox</string>
+
+    <!-- About -->
+    <string name="VNumber">Version: 1.0 </string>
+    <string name="Made">Made By:</string>
+    <string name="Raphael">Raphael Najera</string>
+    <string name="Adrian">Adrian Caprini</string>
+    <string name="Johnson">Johnson Liang</string>
+    <string name="description">This app displays the data that the solar panels, located on the roof of the L building of the Humber College North Campus retrieves.
+    The information that is being displayed is the total amount of Power, daily yield and total yield of each solar panel PV.  </string>
+    <string name="About">About</string>
 
     <!-- PV1 -->
     <string name="PV1">Solar Panel PV1</string>
     <string name="PV1Log">PV1 Log</string>
     <string name="PV14">PV1 and PV4</string>
-
 
     <!-- PV2 -->
     <string name="PV2">Solar Panel PV2</string>
@@ -55,26 +67,8 @@
     <string name="ChargeControllersLog">Charge Controllers Log</string>
     <string name="PV3_Power">Power:</string>
 
-
     <!-- PV4 -->
     <string name="PV4">Solar Panel PV4</string>
     <string name="PV4Log">PV4 Log</string>
 
-    <!-- About -->
-    <string name="VNumber">Version: 1.0 </string>
-    <string name="Made">Made By:</string>
-    <string name="Raphael">Raphael Najera</string>
-    <string name="Adrian">Adrian Caprini</string>
-    <string name="Johnson">Johnson Liang</string>
-    <string name="description">This app displays the data that the solar panels, located on the roof of the L building of the Humber College North Campus retrieves.
-    The information that is being displayed is the total amount of Power, daily yield and total yield of each solar panel PV.  </string>
-    <string name="About">About</string>
-
-    <!-- Home -->
-    <string name="SolarPanel">The benefit of solar energy is it is more environmentally friendly then burning fossil fuels to produce energy.  Also, it reduces the amount of greenhouse gas emissions.</string>
-    <string name="Benefit">The benefit of this data is so that the Humber community can see how much solar energy and power the solar panel retrieved. </string>
-    <string name="PV1module">Sunny Webbox</string>
-    <string name="PV2module">Envoy Communications</string>
-    <string name="PV3module">Outback Power</string>
-    <string name="PV4module">Sunny Webbox</string>
 </resources>

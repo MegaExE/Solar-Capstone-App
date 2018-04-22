@@ -36,7 +36,6 @@ public class PV4CurrentData extends Fragment {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("PV4");
         View rootView = inflater.inflate(R.layout.fragment_solarpv4, container, false);
-
         return rootView;
     }
 
@@ -49,27 +48,25 @@ public class PV4CurrentData extends Fragment {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
 
-
                 for(DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
                     String PV4_Date = dss.child("Date").getValue(String.class);
                     String PV4_Power = dss.child("Power").getValue(String.class);
                     String PV4_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV4_Total = dss.child("Total_yield").getValue(String.class);
-                    //Declaring textviews
-                    TextView PV1DateValueTV = getActivity().findViewById(R.id.Date_Value);
-                    TextView PV1PowerValueTV = getActivity().findViewById(R.id.Power_Value);
-                    TextView PV1DailyValueTV = getActivity().findViewById(R.id.Dialyyield_Value);
-                    TextView PV1TotalValueTV = getActivity().findViewById(R.id.Totalyield_Value);
 
+                    //Declaring textviews
+                    TextView PV4DateValueTV = getActivity().findViewById(R.id.Date_Value);
+                    TextView PV4PowerValueTV = getActivity().findViewById(R.id.Power_Value);
+                    TextView PV4DailyValueTV = getActivity().findViewById(R.id.Dialyyield_Value);
+                    TextView PV4TotalValueTV = getActivity().findViewById(R.id.Totalyield_Value);
 
                     //Display the Date, Current Power, Daily yield and Total yield that PV1 stored on the firebase
-                    PV1DateValueTV.setText(PV4_Date);
-                    PV1PowerValueTV.setText(PV4_Power);
-                    PV1DailyValueTV.setText(PV4_Daily);
-                    PV1TotalValueTV.setText(PV4_Total);
+                    PV4DateValueTV.setText(PV4_Date);
+                    PV4PowerValueTV.setText(PV4_Power);
+                    PV4DailyValueTV.setText(PV4_Daily);
+                    PV4TotalValueTV.setText(PV4_Total);
                 }
-
             }
 
             @Override

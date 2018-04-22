@@ -21,6 +21,8 @@ import humber.ceng355.solarcapstoneapp.R;
 
 
 public class SolarPV1 extends Fragment {
+
+    //declare view, viewpager and tabLayout
     View view;
     ViewPager viewPager;
     TabLayout tabLayout;
@@ -43,11 +45,13 @@ public class SolarPV1 extends Fragment {
     }
     private class sliderAdapter extends FragmentPagerAdapter {
 
+        //Creates the tab
         final  String tabs[]={"Data", "Log"};
         public sliderAdapter(FragmentManager fm) {
             super(fm);
         }
 
+        //Check the selected tab to display the layout that tab
         @Override
         public Fragment getItem(int position) {
             if(position == 0){

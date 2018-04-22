@@ -28,6 +28,7 @@ public class PV3Port2CurrentData extends Fragment {
     public PV3Port2CurrentData() {
     }
 
+    //Declare database reference
     DatabaseReference myRef;
 
     @Override
@@ -49,7 +50,6 @@ public class PV3Port2CurrentData extends Fragment {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
 
-
                 for(DataSnapshot dss : dataSnapshot.getChildren()) {
                     //Retrieving the data stored on the firebase
                     String PV3_Date = dss.child("Date").getValue(String.class);
@@ -62,7 +62,6 @@ public class PV3Port2CurrentData extends Fragment {
                     TextView PV3BatteryVoltTV = getActivity().findViewById(R.id.BatteryVolt_Value2);
                     TextView PV3PowerTV = getActivity().findViewById(R.id.Power_Value);
                     TextView PV3VACinTV = getActivity().findViewById(R.id.VACin_Value2);
-
 
                     //Display the Date, BatteryVolt, Power and VACin that PV3b stored on the firebase
                     PV3DateTV.setText(PV3_Date);

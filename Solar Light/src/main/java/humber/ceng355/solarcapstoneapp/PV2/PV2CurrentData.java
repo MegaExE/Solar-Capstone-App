@@ -37,9 +37,6 @@ public class PV2CurrentData extends Fragment {
         myRef = database.getReference("PV2");
         View rootView = inflater.inflate(R.layout.fragment_solarpv2, container, false);
 
-
-
-
         return rootView;
     }
 
@@ -60,17 +57,16 @@ public class PV2CurrentData extends Fragment {
                     String PV2_Daily = dss.child("Daily_yield").getValue(String.class);
                     String PV2_Total = dss.child("Total_yield").getValue(String.class);
                     //Declaring textviews
-                    TextView PV1DateValueTV = getActivity().findViewById(R.id.Date_Value);
-                    TextView PV1PowerValueTV = getActivity().findViewById(R.id.Power_Value);
-                    TextView PV1DailyValueTV = getActivity().findViewById(R.id.Dialyyield_Value);
-                    TextView PV1TotalValueTV = getActivity().findViewById(R.id.Totalyield_Value);
-
+                    TextView PV2DateValueTV = getActivity().findViewById(R.id.Date_Value);
+                    TextView PV2PowerValueTV = getActivity().findViewById(R.id.Power_Value);
+                    TextView PV2DailyValueTV = getActivity().findViewById(R.id.Dialyyield_Value);
+                    TextView PV2TotalValueTV = getActivity().findViewById(R.id.Totalyield_Value);
 
                     //Display the Date, Current Power, Daily yield and Total yield that PV1 stored on the firebase
-                    PV1DateValueTV.setText(PV2_Date);
-                    PV1PowerValueTV.setText(PV2_Power.trim());
-                    PV1DailyValueTV.setText(PV2_Daily.trim());
-                    PV1TotalValueTV.setText(PV2_Total.trim());
+                    PV2DateValueTV.setText(PV2_Date);
+                    PV2PowerValueTV.setText(PV2_Power.trim());
+                    PV2DailyValueTV.setText(PV2_Daily.trim());
+                    PV2TotalValueTV.setText(PV2_Total.trim());
                 }
 
             }
